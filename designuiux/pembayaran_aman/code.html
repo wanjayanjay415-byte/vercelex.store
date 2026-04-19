@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Checkout | Ethereal Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#430097",
+                        "on-primary-fixed-variant": "#535e72",
+                        "on-tertiary-fixed-variant": "#003d5a",
+                        "on-tertiary-container": "#00344d",
+                        "tertiary-fixed-dim": "#25adf1",
+                        "on-secondary-fixed-variant": "#6514d6",
+                        "error-dim": "#a70138",
+                        "on-primary-container": "#495468",
+                        "outline": "#747779",
+                        "surface-container-low": "#eef1f3",
+                        "surface-variant": "#d9dde0",
+                        "surface": "#f5f7f9",
+                        "on-primary": "#eff2ff",
+                        "on-primary-fixed": "#374155",
+                        "surface-dim": "#d0d5d8",
+                        "secondary-dim": "#6411d5",
+                        "secondary-fixed-dim": "#d0b8ff",
+                        "error-container": "#f74b6d",
+                        "surface-container-highest": "#d9dde0",
+                        "secondary": "#702ae1",
+                        "tertiary-dim": "#00557b",
+                        "on-secondary-container": "#5b00c7",
+                        "on-background": "#2c2f31",
+                        "primary": "#515c70",
+                        "background": "#f5f7f9",
+                        "on-secondary": "#f8f0ff",
+                        "inverse-on-surface": "#9a9d9f",
+                        "surface-container-high": "#dfe3e6",
+                        "tertiary-fixed": "#40bbff",
+                        "surface-container": "#e5e9eb",
+                        "primary-fixed": "#dae6fe",
+                        "surface-bright": "#f5f7f9",
+                        "on-surface": "#2c2f31",
+                        "tertiary-container": "#40bbff",
+                        "on-error": "#ffefef",
+                        "primary-fixed-dim": "#ccd7ef",
+                        "on-surface-variant": "#595c5e",
+                        "outline-variant": "#abadaf",
+                        "on-tertiary": "#e9f4ff",
+                        "primary-container": "#dae6fe",
+                        "inverse-primary": "#dae6fe",
+                        "secondary-fixed": "#dcc9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#00628c",
+                        "primary-dim": "#455064",
+                        "secondary-container": "#dcc9ff",
+                        "surface-tint": "#515c70",
+                        "on-tertiary-fixed": "#001a29",
+                        "on-error-container": "#510017",
+                        "inverse-surface": "#0b0f10",
+                        "error": "#b41340"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-300 active:scale-95 transition-transform duration-200" style="">
+<span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-semibold tracking-tight text-xl font-bold text-slate-800 dark:text-slate-100" style="">           Ethereal Digital</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-4">
+<span class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm" style="">Store</span>
+<span class="text-slate-500 dark:text-slate-400 font-semibold text-sm" style="">Library</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300" data-icon="shopping_cart" style="">shopping_cart</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-4 md:px-8 max-w-6xl mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="mb-12">
+<h2 class="text-[3.5rem] font-bold leading-none tracking-tight text-on-background mb-4" style="">Secure Checkout</h2>
+<div class="flex items-center gap-3 py-3 px-5 bg-tertiary-container/20 rounded-full w-fit">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified_user" style="">verified_user</span>
+<span class="text-xs font-bold font-label text-on-tertiary-container tracking-wider uppercase" style="">Encrypted End-to-End</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Column: Forms -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Contact Information -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="text-on-surface-variant font-headline font-semibold text-lg" style="">01</span>
+<h3 class="text-xl font-bold tracking-tight" style="">Contact Information</h3>
+</div>
+<div class="bg-surface-container-low rounded-[1.5rem] p-8">
+<label class="block text-xs font-bold font-label text-on-surface-variant mb-3 tracking-widest" style="">EMAIL FOR DELIVERY</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-secondary/30 transition-all duration-300 placeholder:text-outline-variant" placeholder="alexander@ethereal.digital" type="email"/>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed" style="">
+                            Your digital licenses and assets will be delivered to this address immediately after purchase.
+                        </p>
+</div>
+</section>
+<!-- Payment Methods -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="text-on-surface-variant font-headline font-semibold text-lg" style="">02</span>
+<h3 class="text-xl font-bold tracking-tight" style="">Payment Method</h3>
+</div>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2"><!-- QRIS -->
+<!-- Bank Transfer -->
+<div class="bg-surface-container-low p-4 rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex flex-col h-full justify-between gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl" data-icon="account_balance" style="">account_balance</span>
+<span class="text-[10px] font-bold font-label tracking-widest text-on-surface-variant" style="">BANK TRANSFER</span>
+</div>
+</div>
+<!-- Credit Card -->
+<div class="bg-surface-container-low p-4 rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex flex-col h-full justify-between gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl" data-icon="credit_card" style="">credit_card</span>
+<span class="text-[10px] font-bold font-label tracking-widest text-on-surface-variant" style="">CREDIT CARD</span>
+</div>
+</div></div>
+<!-- Payment Details (QRIS focus) -->
+</section>
+</div>
+<!-- Right Column: Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-24 space-y-6">
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-8 shadow-[0_40px_60px_rgba(44,47,49,0.05)] border border-outline-variant/10">
+<h3 class="text-xl font-bold tracking-tight mb-8" style="">Order Summary</h3>
+<div class="space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Neon architectural visualization digital asset" class="w-full h-full object-cover" data-alt="high-tech 3D architectural rendering of a futuristic neon city building with purple and cyan lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwgkushKe3gpS8v4D3yij6dAIH9hvQo8kG-NOLtYXVhEufV1bWmXsBVq35TpCkAZq1WgKeG9gG7Rn6t_970FWLaO_z0lSsS3lc0KbWPoKDpaeFIwBObRGn9E40tbOt8seaebqVRYFbb4JCuM0xPqIQh4ip-KCCJInZoXiUvB77jBKrAx4vypXSUSZoAzZLVharGF4oUMnFqzg-pLV5P0Nj5btBfaBzcprmvsSqcnOSmoQ3atcb4oyarlFs3MyYlWaH3Tdp456JgGiV" style=""/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface" style="">Ethereal Motion Pack</p>
+<p class="text-xs text-on-surface-variant" style="">Standard License</p>
+</div>
+<span class="text-sm font-bold text-on-surface" style="">$129.00</span>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Minimalist glass UI texture asset" class="w-full h-full object-cover" data-alt="Close-up of frosted glass UI elements with soft refraction and elegant gradients in a minimalist technological style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc9UOdmm0LOGDulbnVauHVYA5W4_PF6mh23Dz4T_zWeCBEwfbRU8atUN6fIW1hPEz5JI6Aep0OJJKwve4NSFRPvvBIp6N5EH89ppc6L2isbRjL3IYwni-CIWV25tUMAcyvZPukTrUL7Q-ZE6tkCv183ndDa7P6rNzLCu35-F1J3kkEUeaOJpssUyjgiSIt0cOqxiKFVK5hRo4HiE-jLAzF4oddx4Pn0NwCn5KoLQ0lU2NWVOjPv2SR1aOtF4lf7G3AA2cJCea2sogD" style=""/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface" style="">Glassmorphism UI Kit</p>
+<p class="text-xs text-on-surface-variant" style="">Commercial License</p>
+</div>
+<span class="text-sm font-bold text-on-surface" style="">$89.00</span>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-4 pt-8 border-t border-outline-variant/10">
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span class="" style="">Subtotal</span>
+<span class="" style="">$218.00</span>
+</div>
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span class="" style="">Service Fee</span>
+<span class="" style="">$1.50</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="text-lg font-bold text-on-surface" style="">Total</span>
+<span class="text-2xl font-extrabold text-secondary" style="">$219.50</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full mt-10 py-5 rounded-full bg-gradient-to-r from-secondary to-secondary-dim text-on-secondary font-bold text-base shadow-[0_15px_30px_rgba(112,42,225,0.25)] hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 group" style="">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-icon="lock" style='font-variation-settings: "FILL" 1;'>lock</span>
+                            Complete Purchase
+                        </button>
+<div class="mt-6 flex items-center justify-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="security" style="">security</span>
+<span class="text-[10px] font-bold font-label tracking-widest uppercase" style="">SSL Secure Payment</span>
+</div>
+</div>
+<!-- Trust Note -->
+<div class="p-6 bg-surface-container-low rounded-xl">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="info" style="">info</span>
+<p class="text-xs leading-relaxed text-on-surface-variant" style="">
+                                Your payment is processed through a PCI-DSS compliant gateway. We do not store your full card details. By completing this purchase, you agree to our <span class="text-secondary font-bold cursor-pointer" style="">Terms of Service</span>.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Success Toast (Visual Reference) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] pointer-events-none">
+<div class="bg-surface-container-lowest glass-panel px-6 py-4 rounded-full shadow-2xl flex items-center gap-4 border border-outline-variant/20">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" data-icon="check" style='font-variation-settings: "wght" 700;'>check</span>
+</div>
+<span class="text-sm font-bold text-on-surface pr-4" style="">Ready to finalize your purchase</span>
+</div>
+</div>
+</main>
+<!-- Footer Space for BottomNavBar on Mobile -->
+<div class="h-24 md:hidden"></div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl rounded-t-3xl border-t border-slate-200/20 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="grid_view" style="">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider" style="">Store</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="">auto_awesome</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider" style="">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-2xl px-5 py-1.5 tap-highlight-transparent transition-all duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="">shopping_bag</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider" style="">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="person" style="">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider" style="">Profile</span>
+</div>
+</nav>
+</body></html>

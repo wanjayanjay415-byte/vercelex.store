@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethereal Digital - Shopping Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#430097",
+                    "on-primary-fixed-variant": "#535e72",
+                    "on-tertiary-fixed-variant": "#003d5a",
+                    "on-tertiary-container": "#00344d",
+                    "tertiary-fixed-dim": "#25adf1",
+                    "on-secondary-fixed-variant": "#6514d6",
+                    "error-dim": "#a70138",
+                    "on-primary-container": "#495468",
+                    "outline": "#747779",
+                    "surface-container-low": "#eef1f3",
+                    "surface-variant": "#d9dde0",
+                    "surface": "#f5f7f9",
+                    "on-primary": "#eff2ff",
+                    "on-primary-fixed": "#374155",
+                    "surface-dim": "#d0d5d8",
+                    "secondary-dim": "#6411d5",
+                    "secondary-fixed-dim": "#d0b8ff",
+                    "error-container": "#f74b6d",
+                    "surface-container-highest": "#d9dde0",
+                    "secondary": "#702ae1",
+                    "tertiary-dim": "#00557b",
+                    "on-secondary-container": "#5b00c7",
+                    "on-background": "#2c2f31",
+                    "primary": "#515c70",
+                    "background": "#f5f7f9",
+                    "on-secondary": "#f8f0ff",
+                    "inverse-on-surface": "#9a9d9f",
+                    "surface-container-high": "#dfe3e6",
+                    "tertiary-fixed": "#40bbff",
+                    "surface-container": "#e5e9eb",
+                    "primary-fixed": "#dae6fe",
+                    "surface-bright": "#f5f7f9",
+                    "on-surface": "#2c2f31",
+                    "tertiary-container": "#40bbff",
+                    "on-error": "#ffefef",
+                    "primary-fixed-dim": "#ccd7ef",
+                    "on-surface-variant": "#595c5e",
+                    "outline-variant": "#abadaf",
+                    "on-tertiary": "#e9f4ff",
+                    "primary-container": "#dae6fe",
+                    "inverse-primary": "#dae6fe",
+                    "secondary-fixed": "#dcc9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#00628c",
+                    "primary-dim": "#455064",
+                    "secondary-container": "#dcc9ff",
+                    "surface-tint": "#515c70",
+                    "on-tertiary-fixed": "#001a29",
+                    "on-error-container": "#510017",
+                    "inverse-surface": "#0b0f10",
+                    "error": "#b41340"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/70 backdrop-blur-xl shadow-sm">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-slate-600 hover:bg-slate-200/50 transition-all duration-300 p-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+<div class="font-['Manrope'] font-semibold tracking-tight text-xl font-bold text-slate-800">Ethereal Digital</div>
+<div class="flex items-center gap-4">
+<button class="text-indigo-600 hover:bg-slate-200/50 transition-all duration-300 p-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Shopping Cart Content -->
+<div class="lg:col-span-8 space-y-6">
+<h1 class="text-3xl font-bold tracking-tight text-primary mb-8">Your Cart</h1>
+<!-- Product List -->
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center gap-6 group hover:bg-white transition-all duration-300">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D holographic digital asset icon with glowing purple and blue gradients on a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkdAcnloQAKBKfLSeGu65XkQ0MjdQntgaGkNkq5nwGfBt67TuZYzHgxnYVwZ88kolG2Bs2_7olX_ff7LrMRTwfA4R5351otfOK4l-JWxMs4RKaAWe3rVkjp4ir_Hi4hRtgzZguFi_jclp7OiUWNujx0Yt8FWfcny4AkZZu16IvHuMSgbCUO3fePkylAGJdlaHCipmLczAIJGV0yxFNhpfXhDHGG5IUmd0KZG2SKXHtr_7CFJbbVGK-UvT8dGal_u_uM7RDLxEE1W6B"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-semibold text-on-surface">Neural Design Kit v2</h3>
+<p class="text-sm text-on-surface-variant mt-1">Subscription: Monthly Pro</p>
+</div>
+<span class="text-lg font-bold text-primary">$29.00</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center bg-surface-container-low rounded-full px-3 py-1 gap-4">
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm font-semibold">01</span>
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 text-sm font-medium">
+<span class="material-symbols-outlined text-base">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center gap-6 group hover:bg-white transition-all duration-300">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Futuristic cyber security interface concept with glowing neon data lines and intricate geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB_GWlTzXOjDNuPFp--__A6oXKsH6XiP0apwY0s02eqOCHO3DR-AkujjiBZ25lM75Q99oC7_A_QWdqXWf45aEJt0EUFIoaXqgVDU5QZVQaacf0gmk8Nlnb5DviJ41KssNppmh23ROGE3R2xJBkEXRTNEa44bvilpi8w81bBjXcjlFW7SjHSD6uQVGuCPSSdu7Wu6Ku1dBIQuGU5Y_zgkexJF_eAm7qVVdZts3CDn1Va7yJalZNw7bcN-Y0fJW6iehi94nY9c8E9KZY"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-semibold text-on-surface">Cyber Sentinel Shield</h3>
+<p class="text-sm text-on-surface-variant mt-1">Subscription: Annual Enterprise</p>
+</div>
+<span class="text-lg font-bold text-primary">$499.00</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center bg-surface-container-low rounded-full px-3 py-1 gap-4">
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm font-semibold">01</span>
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 text-sm font-medium">
+<span class="material-symbols-outlined text-base">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center gap-6 group hover:bg-white transition-all duration-300">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Creative 3D cloud computing illustration with floating data particles and soft luminous atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJByRdLJuvQJuT60X4mU_i7clLFW9c2VDHaOoiJ2q0Rs3AjnEjjtkQ0PeXgDnZUzc67rXnkwegaq8Fb2te-uMyZnhhCesvbhwhtdbg5_vjLsUg9-pF6Gf4JM75Cmg7NcACp-MarvS7b82L_xpU6ti-hL0hGeVfngzh8a9yQST22juqDjxHzOoLz2hZIyn2dl-Qm5X8sQx3ZVNOEsiVQk29K_4c-tTjoXDRRAKvce-lCO89KLeMg6uTCtJruqskcNv7bFQiuAabucOB"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-semibold text-on-surface">Cloud Asset Library</h3>
+<p class="text-sm text-on-surface-variant mt-1">Subscription: Lifetime Access</p>
+</div>
+<span class="text-lg font-bold text-primary">$120.00</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center bg-surface-container-low rounded-full px-3 py-1 gap-4">
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm font-semibold">01</span>
+<button class="hover:text-secondary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 text-sm font-medium">
+<span class="material-symbols-outlined text-base">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Panel -->
+<div class="lg:col-span-4">
+<div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 sticky top-24">
+<h2 class="text-xl font-bold text-primary mb-6">Order Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span class="font-medium text-on-surface">$648.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated Tax</span>
+<span class="font-medium text-on-surface">$45.36</span>
+</div>
+<div class="h-px bg-surface-container mt-4"></div>
+<div class="flex justify-between text-xl font-bold text-primary pt-2">
+<span>Total</span>
+<span>$693.36</span>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="mb-8">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant block mb-2">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Enter code" type="text"/>
+<button class="bg-surface-container-low px-6 rounded-xl text-sm font-semibold text-primary hover:bg-surface-container-high transition-colors">Apply</button>
+</div>
+</div>
+<!-- Trust Badge -->
+<div class="flex items-center justify-center gap-2 mb-8 py-3 bg-tertiary-container/10 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-xs font-bold text-on-tertiary-container uppercase tracking-tight">Secure 256-bit SSL Encrypted</span>
+</div>
+<!-- Checkout Button -->
+<button class="w-full py-4 rounded-full bg-gradient-to-br from-secondary to-secondary-dim text-on-secondary font-bold text-lg shadow-lg shadow-secondary/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">lock</span>
+                        Secure Checkout
+                    </button>
+<p class="text-center text-[11px] text-on-surface-variant mt-6 px-4">
+                        By clicking checkout, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl border-t border-slate-200/20">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-5 py-1.5 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

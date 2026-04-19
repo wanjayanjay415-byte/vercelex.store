@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#430097",
+                    "on-primary-fixed-variant": "#535e72",
+                    "on-tertiary-fixed-variant": "#003d5a",
+                    "on-tertiary-container": "#00344d",
+                    "tertiary-fixed-dim": "#25adf1",
+                    "on-secondary-fixed-variant": "#6514d6",
+                    "error-dim": "#a70138",
+                    "on-primary-container": "#495468",
+                    "outline": "#747779",
+                    "surface-container-low": "#eef1f3",
+                    "surface-variant": "#d9dde0",
+                    "surface": "#f5f7f9",
+                    "on-primary": "#eff2ff",
+                    "on-primary-fixed": "#374155",
+                    "surface-dim": "#d0d5d8",
+                    "secondary-dim": "#6411d5",
+                    "secondary-fixed-dim": "#d0b8ff",
+                    "error-container": "#f74b6d",
+                    "surface-container-highest": "#d9dde0",
+                    "secondary": "#702ae1",
+                    "tertiary-dim": "#00557b",
+                    "on-secondary-container": "#5b00c7",
+                    "on-background": "#2c2f31",
+                    "primary": "#515c70",
+                    "background": "#f5f7f9",
+                    "on-secondary": "#f8f0ff",
+                    "inverse-on-surface": "#9a9d9f",
+                    "surface-container-high": "#dfe3e6",
+                    "tertiary-fixed": "#40bbff",
+                    "surface-container": "#e5e9eb",
+                    "primary-fixed": "#dae6fe",
+                    "surface-bright": "#f5f7f9",
+                    "on-surface": "#2c2f31",
+                    "tertiary-container": "#40bbff",
+                    "on-error": "#ffefef",
+                    "primary-fixed-dim": "#ccd7ef",
+                    "on-surface-variant": "#595c5e",
+                    "outline-variant": "#abadaf",
+                    "on-tertiary": "#e9f4ff",
+                    "primary-container": "#dae6fe",
+                    "inverse-primary": "#dae6fe",
+                    "secondary-fixed": "#dcc9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#00628c",
+                    "primary-dim": "#455064",
+                    "secondary-container": "#dcc9ff",
+                    "surface-tint": "#515c70",
+                    "on-tertiary-fixed": "#001a29",
+                    "on-error-container": "#510017",
+                    "inverse-surface": "#0b0f10",
+                    "error": "#b41340"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/50">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-200/50 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+<h1 class="font-headline font-bold text-xl tracking-tight text-slate-800 text-center flex-1">Ethereal Digital</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-200/50 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-7xl mx-auto space-y-8">
+<!-- Promo / Special Offers (New Top Hero Section) -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-2">
+<h3 class="font-headline text-lg font-bold text-on-background">Special Offers</h3>
+<span class="text-[10px] font-label text-secondary tracking-widest uppercase">Ends in 04:22:15</span>
+</div>
+<div class="relative overflow-hidden rounded-3xl bg-on-background aspect-[16/9] flex items-center group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="Abstract 3D digital art with flowing purple and blue glass textures, futuristic lighting, high resolution wallpaper style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlfYtsZ44ZGo0G7kRK4KFwc_7L5l_sF8nI2NSFCGn0Nbj4eyf-1o4wAozQb8FTuqMYXBBI7Hkdkf4DRv-M-Cz-YhQheAs0emJmBZ8-cUZoNOLSSRkXB1LfpJnEMaBx47HFRtQ-CmskwUlWRW_ewY7KqNGco-2it5NL__3xTPHo42qzEIKIB8qtNTKXNec_Rtqe7tcq8o1_1vFVGxJBQDggk37ar5psyB8iWnN3_OS9OrxFMZiMZUcVR1FEpejydfSJsB8TEE9vzlY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
+<div class="relative z-10 px-8 py-6 w-full mt-auto">
+<div class="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-secondary/20 border border-secondary/30 backdrop-blur-md mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[9px] font-label tracking-widest text-secondary-fixed-dim uppercase">Limited Offer</span>
+</div>
+<h2 class="font-headline text-2xl font-bold text-white leading-tight mb-2">NeuralSync Pro <br/><span class="text-secondary-fixed-dim">AI Automation Suite</span></h2>
+<div class="flex items-center gap-4">
+<span class="text-white text-lg font-bold">$99.00 <span class="text-xs line-through text-slate-400 font-normal ml-1">$249.00</span></span>
+<button class="ml-auto px-6 py-2.5 bg-white text-on-background rounded-full font-label text-[10px] font-bold tracking-wider hover:scale-105 active:scale-95 transition-all duration-300">
+                            CLAIM NOW
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Filter Section -->
+<section class="space-y-4">
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full pl-12 pr-6 py-3.5 bg-surface-container-highest rounded-2xl border-none focus:ring-2 focus:ring-secondary/30 focus:bg-surface-container-lowest transition-all duration-300 shadow-sm text-sm text-on-surface" placeholder="Search digital assets..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="px-5 py-2 rounded-xl bg-secondary text-on-secondary font-label text-[10px] tracking-wider whitespace-nowrap shadow-md shadow-secondary/20">ALL</button>
+<button class="px-5 py-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label text-[10px] tracking-wider whitespace-nowrap">AI TOOLS</button>
+<button class="px-5 py-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label text-[10px] tracking-wider whitespace-nowrap">SUBSCRIPTIONS</button>
+<button class="px-5 py-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label text-[10px] tracking-wider whitespace-nowrap">SOFTWARE</button>
+<button class="px-5 py-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label text-[10px] tracking-wider whitespace-nowrap">ASSETS</button>
+</div>
+</section>
+<!-- 2x2 Product Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-center px-2">
+<h3 class="font-headline text-lg font-bold text-on-background">Featured Store</h3>
+<button class="text-secondary font-label text-[10px] font-bold tracking-widest flex items-center gap-1 group uppercase">
+                    View All <span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Updated to 2x2 Grid for Mobile -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist 3D rendered software box icon with vibrant violet glow on clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO8He_rl6VJVOJxZkcr2ci06Y9KauxwNiM3EWrAi7e5ipxm0gbffIcqZM2Qnn1coorxYSqBkW-jpNyzQLgs60czNNM9ZcNloHcVwz1WqK5WLchK6Y4E0Zzi-SZYxJUiOX7n1CneUSukC_LL3sUe9KLfRQ4j-IKW3c7QHd83wS2LsipllUkwedKKulJD8sHybranffJGgqjd72hTpkhIp13K6HxZ0N8ohzwzo7qfgjOUqa0SzRIMU0W26Bt3QKzmCdDb6c6ccDylH5q"/>
+</div>
+<div class="p-3 space-y-2 flex flex-col flex-grow">
+<div class="space-y-0.5 flex-grow">
+<p class="text-on-surface-variant font-label text-[8px] tracking-widest uppercase">SOFTWARE</p>
+<h4 class="font-headline font-bold text-xs text-on-surface line-clamp-1 group-hover:text-secondary transition-colors">GhostWriter AI v4</h4>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline font-bold text-sm text-on-surface">$149.00</span>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-secondary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cybersecurity concept visualization with glowing blue circuit patterns and digital lock icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV3spAeFsUQrgVBqgoIJSFp3j4fkaq2cATAV4ApVHrX4v4nic-fYvbDd-fR_QqCZV9ZwzYB947jw2ebqNg0EY_BxYRsMH8Ty8d0THblcYfG6E5G7Z5vNAXgyNXLVdJYI9LFnzb6AXhTCw16JTjh_snFjAbiDagRG2g4FovqiG97BkBhLeGE32znvq_Y1hyKTf1WH_X49nixD6O96KgvGG1fL68HnSpoDba526pvARs52RXAJDSULekL9wB78F0uHOZTY5mbhHhhvE_"/>
+</div>
+<div class="p-3 space-y-2 flex flex-col flex-grow">
+<div class="space-y-0.5 flex-grow">
+<p class="text-on-surface-variant font-label text-[8px] tracking-widest uppercase">ASSETS</p>
+<h4 class="font-headline font-bold text-xs text-on-surface line-clamp-1 group-hover:text-secondary transition-colors">Cyber HUD Pack</h4>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline font-bold text-sm text-on-surface">$29.00</span>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-secondary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract colorful fluid liquid animation frame, high energy aesthetics for digital backgrounds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4kzmK_NxcITwEAqg02tnWEY4wiL31yJol7imSsnzqHeFR5Ent5RJOJRdwiwmZGwhstKr-CQtUoTnm6BK8CuhUx2YRjv_NoQzLUx06Ox11xiGn5bdS_Vgjxzu4VQlQrcQhyKAwQ-s4iASCJgW1hNWmMsU6-2sE2WtBStlk6XwsiiRB04VmnAqL7wpeX0nN8T2xmHi1Y1Gmz-AZ4fJ7HXdXNl5guDhiwLcOKXi5Prh7AJLh7IzZsd431oPVweE0UD3-3HOxRITCjlGE"/>
+</div>
+<div class="p-3 space-y-2 flex flex-col flex-grow">
+<div class="space-y-0.5 flex-grow">
+<p class="text-on-surface-variant font-label text-[8px] tracking-widest uppercase">SUBS</p>
+<h4 class="font-headline font-bold text-xs text-on-surface line-clamp-1 group-hover:text-secondary transition-colors">Ethereal Cloud Pro</h4>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline font-bold text-sm text-on-surface">$12.99</span>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-secondary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clean architectural render of minimalist futuristic office space with soft lighting and digital displays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9UW89DvwgkTkCyQUNgPeMvmFBfD-g8L6ZnjtPEnCNgLCi3TQMFRysuZlmls0hktTVbs4AIG0uXtZgfScm76rSb4t88K1zQSgkPE9RU9Vn9MoEC00IC1vK6WDAq9gjbzsOndHrtsadK2RIWiesdIzHOk85PRseStboGRNQozHRFXRvqe3MC2ExtuG3GQzescmyH0J06elCm9jW34fWbXlxHUFQpCPsD1-uzmXjJMHnykBkqfzdG5Of5XfZAc69t3kKJVKMKBVNNbX"/>
+</div>
+<div class="p-3 space-y-2 flex flex-col flex-grow">
+<div class="space-y-0.5 flex-grow">
+<p class="text-on-surface-variant font-label text-[8px] tracking-widest uppercase">ASSETS</p>
+<h4 class="font-headline font-bold text-xs text-on-surface line-clamp-1 group-hover:text-secondary transition-colors">Unreal Templates</h4>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline font-bold text-sm text-on-surface">$89.00</span>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-secondary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Benefits Section -->
+<section class="grid grid-cols-1 gap-3 pt-4">
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-2xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-xl bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-xl" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h5 class="font-semibold text-sm text-on-surface">Zero Latency</h5>
+<p class="text-[10px] text-on-surface-variant leading-none">Instant access post-purchase</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-2xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-xl bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shield">shield</span>
+</div>
+<div>
+<h5 class="font-semibold text-sm text-on-surface">Secure Assets</h5>
+<p class="text-[10px] text-on-surface-variant leading-none">Encryption at every touchpoint</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl border-t border-slate-200/20">
+<a class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-5 py-1.5 transition-all duration-300 ease-out tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label text-[10px] font-semibold uppercase tracking-wider mt-1">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label text-[10px] font-semibold uppercase tracking-wider mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label text-[10px] font-semibold uppercase tracking-wider mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-1.5 hover:text-indigo-500 transition-all duration-300 ease-out tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label text-[10px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
