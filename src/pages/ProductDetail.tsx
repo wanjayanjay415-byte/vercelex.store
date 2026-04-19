@@ -1,7 +1,7 @@
 import PageWrapper from '../components/layout/PageWrapper';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
 import { productsDB } from '../data/products';
@@ -18,6 +18,11 @@ export default function ProductDetail() {
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const product = productsDB.find(p => p.id === id);
   if (!product) {
     return <div className="flex h-screen items-center justify-center text-white">Product Not Found</div>;

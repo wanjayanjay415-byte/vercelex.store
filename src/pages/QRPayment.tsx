@@ -14,6 +14,8 @@ export default function QRPayment() {
   const { formatPrice } = useCurrency();
   const cartContext = useCart() as any; 
   const { t } = useLanguage();
+  const [toastMessage, setToastMessage] = useState('');
+  const [isSuccessToast, setIsSuccessToast] = useState(false);
   
   // Ambil state dari checkout
   const method = location.state?.method || 'qris';
@@ -37,11 +39,15 @@ export default function QRPayment() {
 
   const handleConfirm = () => {
     if (method === 'crypto' && !txHash) {
-      alert(t('payAlertCrypto'));
+      setToastMessage(t('payAlertCrypto'));
+      setIsSuccessToast(false);
+      setTimeout(() => setToastMessage(''), 3000);
       return;
     }
     if (method === 'qris' && !uploadedFile) {
-      alert(t('payAlertQris'));
+      setToastMessage(t('payAlertQris'));
+      setIsSuccessToast(false);
+      setTimeout(() => setToastMessage(''), 3000);
       return;
     }
 
@@ -54,16 +60,42 @@ export default function QRPayment() {
     }
     
     // Simulate transaction saved
-    alert(t('paySuccess'));
-    navigate('/history', { replace: true });
-    // Idealnya, navigate ke root / lalu pilih menu History
+    setIsSuccessToast(true);
+    setToastMessage(t('paySuccess'));
+    
     setTimeout(() => {
-        window.location.href = '/';
-    }, 500);
+      setToastMessage('');
+      navigate('/history', { replace: true });
+    }, 2500);
   };
 
   return (
     <PageWrapper className="flex flex-col min-h-screen bg-background">
+      {/* Center Toast Notification */}
+      <AnimatePresence>
+        {toastMessage && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.85 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center px-6 pointer-events-none"
+          >
+            <div className={`bg-surface-container-highest/95 backdrop-blur-2xl border ${isSuccessToast ? 'border-green-500/30' : 'border-outline-variant/20'} rounded-2xl px-6 py-5 shadow-2xl shadow-black/40 max-w-sm w-full text-center pointer-events-auto`}>
+              <span className={`material-symbols-outlined text-4xl mb-3 block ${isSuccessToast ? 'text-green-500' : 'text-error'}`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                {isSuccessToast ? 'check_circle' : 'warning'}
+              </span>
+              <p className="text-sm font-bold text-on-surface leading-relaxed">{toastMessage}</p>
+              {!isSuccessToast && (
+                <button onClick={() => setToastMessage('')} className="mt-4 px-6 py-2 rounded-full bg-secondary/20 text-secondary text-xs font-bold uppercase tracking-wider hover:bg-secondary/30 transition-colors">
+                  {t('toastOk') || 'OK'}
+                </button>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* TopAppBar */}
       <header className="w-full top-0 sticky z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 flex items-center px-4 h-16">
         <div className="flex items-center gap-4 w-full max-w-lg mx-auto">
